@@ -1,0 +1,25 @@
+description: OECL_m
+method: simclr_oe
+
+dataset: imagenet30
+dataset_ood: imagenet30
+dataset_oe: imagenet1k
+
+num_workers: 6
+batch_size: 64
+
+# model
+backbone: resnet18
+final_dim: 128
+num_aug: 32
+
+# optimizer
+optimizer: lars
+epochs: 500
+scheduler: cosine
+scheduler_kwargs:
+  t_max: 500
+optim_kwargs:
+  lr: 0.1
+  weight_decay: 0.0005
+  momentum: 0.9
