@@ -28,7 +28,7 @@ bash run_m.sh
 or 
 ```
 cd OECL/src
-torchrun --standalone --nnodes=1 --nproc_per_node=1 ./main/oecl_m/oecl.py --config_env ./yaml/oecl_m/env_oecl.yaml --config_exp ./yaml/oecl_m/oecl.yaml  --times 1 --seed $RANDOM --ddp True --id_class <id_class>
+torchrun --standalone --nnodes=1 --nproc_per_node=4 ./main/oecl_m/oecl.py --config_env ./yaml/oecl_m/env_oecl.yaml --config_exp ./yaml/oecl_m/oecl.yaml  --times 1 --seed $RANDOM --ddp True --id_class <id_class>
 ```
 
 Datasets, batch_size and other settings can be changed in OECL/src/yaml/oecl_m/oecl.yaml.
@@ -41,7 +41,7 @@ bash run_self.sh
 or 
 ```
 cd OECL/src
-torchrun --standalone --nnodes=1 --nproc_per_node=1 ./main/oecl_self/oecl.py --config_env ./yaml/oecl_self/env.yaml --config_exp ./yaml/oecl_self/oecl.yaml  --times 1 --seed $RANDOM --ddp True --id_class <id_class>
+torchrun --standalone --nnodes=1 --nproc_per_node=4 ./main/oecl_self/oecl.py --config_env ./yaml/oecl_self/env.yaml --config_exp ./yaml/oecl_self/oecl.yaml  --times 1 --seed $RANDOM --ddp True --id_class <id_class>
 ```
 
 Datasets, batch_size and other settings can be changed in OECL/src/yaml/oecl_self/oecl.yaml.
